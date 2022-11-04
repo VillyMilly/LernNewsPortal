@@ -5,5 +5,8 @@ New
 {% endblock title %}
 
 {% block content %}
-<h1>{{ new }}</h1>
+<h1>{{ new.header }}</h1>
+<hr>
+<h6 align="left">{{ new.created_date|date:'d M Y' }}</h6>
+<p align="left">{{ new.text_news }}</p>
 {% endblock content %}
