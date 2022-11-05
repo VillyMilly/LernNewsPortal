@@ -19,9 +19,9 @@ News
             </tr>
             {% for new in news %}
             <tr>
-                <td align="left">{{ new.header }}</td>
+                <td align="left">{{ new.header|censor }}</td>
                 <td align="left">{{ new.created_date|date:'d M Y' }}</td>
-                <td align="left">{{ new.text_news|truncatewords:20 }}</td>
+                <td align="left">{{ new.text_news|truncatewords:20|censor }}</td>
             </tr>
             {% endfor %}
         </table>
